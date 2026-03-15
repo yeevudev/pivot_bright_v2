@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Navy + Gold Palette */
+    --background: 220 18% 97%;
+    --foreground: 220 50% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 50% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 50% 12%;
+
+    /* Deep Navy */
+    --primary: 220 55% 18%;
+    --primary-foreground: 0 0% 98%;
+
+    /* Warm Gold */
+    --secondary: 42 78% 46%;
+    --secondary-foreground: 220 55% 12%;
+
+    --muted: 220 15% 91%;
+    --muted-foreground: 220 15% 40%;
+
+    /* Gold Accent */
+    --accent: 42 78% 46%;
+    --accent-foreground: 220 55% 12%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 13% 88%;
+    --input: 220 13% 88%;
+    --ring: 220 55% 35%;
+
+    --radius: 0.5rem;
+
+    /* Custom tokens */
+    --gradient-hero: linear-gradient(135deg, hsl(220 62% 12%) 0%, hsl(220 52% 20%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(42 82% 46%) 0%, hsl(38 86% 52%) 100%);
+    --gradient-teal: linear-gradient(135deg, hsl(220 52% 22%) 0%, hsl(215 48% 28%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(42 82% 46%) 0%, hsl(38 86% 52%) 100%);
+    --shadow-elegant: 0 4px 24px -4px hsl(220 55% 18% / 0.12);
+    --shadow-card: 0 8px 32px -8px hsl(220 55% 18% / 0.15);
+    --shadow-accent: 0 8px 24px -8px hsl(42 78% 46% / 0.35);
+
+    /* Typography */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 220 55% 18%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 220 55% 40%;
+  }
+
+  .dark {
+    --background: 220 55% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 220 50% 11%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 220 50% 11%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 42 78% 46%;
+    --primary-foreground: 220 55% 12%;
+
+    --secondary: 220 50% 25%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 220 45% 15%;
+    --muted-foreground: 220 14% 60%;
+
+    --accent: 42 78% 46%;
+    --accent-foreground: 220 55% 12%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 45% 18%;
+    --input: 220 45% 18%;
+    --ring: 42 78% 46%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+@layer utilities {
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+
+  .gradient-teal {
+    background: var(--gradient-teal);
+  }
+
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-accent {
+    box-shadow: var(--shadow-accent);
+  }
+
+  .gradient-gold {
+    background: var(--gradient-gold);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer components {
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
