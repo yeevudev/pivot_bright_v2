@@ -20,16 +20,16 @@
     --primary: 220 55% 18%;
     --primary-foreground: 0 0% 98%;
 
-    /* Warm Gold */
-    --secondary: 42 78% 46%;
-    --secondary-foreground: 220 55% 12%;
+    /* Logo Green */
+    --secondary: 115 55% 45%;
+    --secondary-foreground: 0 0% 98%;
 
     --muted: 220 15% 91%;
     --muted-foreground: 220 15% 40%;
 
-    /* Gold Accent */
-    --accent: 42 78% 46%;
-    --accent-foreground: 220 55% 12%;
+    /* Logo Green Accent */
+    --accent: 115 55% 45%;
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
@@ -47,7 +47,7 @@
     --gradient-gold: linear-gradient(135deg, hsl(42 82% 46%) 0%, hsl(38 86% 52%) 100%);
     --shadow-elegant: 0 4px 24px -4px hsl(220 55% 18% / 0.12);
     --shadow-card: 0 8px 32px -8px hsl(220 55% 18% / 0.15);
-    --shadow-accent: 0 8px 24px -8px hsl(42 78% 46% / 0.35);
+    --shadow-accent: 0 8px 24px -8px hsl(115 55% 45% / 0.35);
 
     /* Typography */
     --font-heading: 'Playfair Display', serif;
